@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #4F46E5;
+  --color-primary-hover: #4338CA;
+  --color-surface: #ffffff;
+  --color-surface-hover: #f1f5f9;
+  
+  --shadow-soft: 0 10px 40px -10px rgba(0,0,0,0.08);
+  --shadow-glass: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+}
+
+@utility glass-panel {
+  background-color: rgb(255 255 255 / 0.6);
+  backdrop-filter: blur(16px);
+  border-width: 1px;
+  border-color: rgb(255 255 255 / 0.4);
+  box-shadow: var(--shadow-glass);
+  border-radius: 1rem;
+}
+
+body {
+  background-color: var(--color-slate-50);
+  color: var(--color-slate-900);
+  -webkit-font-smoothing: antialiased;
+  font-family: var(--font-sans);
+  background-image: radial-gradient(circle at top right, #eef2ff, transparent 40%),
+                    radial-gradient(circle at bottom left, #f0fdf4, transparent 40%);
+  background-attachment: fixed;
+}
+
+.quill-content {
+  text-align: justify;
+}
+.quill-content ul {
+  list-style-type: disc !important;
+  padding-left: 1.5rem !important;
+  margin-y: 0.5rem;
+}
+.quill-content ol {
+  list-style-type: decimal !important;
+  padding-left: 1.5rem !important;
+  margin-y: 0.5rem;
+}
+.quill-content p {
+  margin-bottom: 0.5rem;
+}
+.quill-content strong {
+  font-weight: 700;
+}
+.ql-container {
+  min-height: 120px;
+  font-family: inherit !important;
+  font-size: 0.875rem !important;
+}
+.ql-editor {
+  min-height: 120px;
+}
